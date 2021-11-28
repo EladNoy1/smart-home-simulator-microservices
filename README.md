@@ -24,9 +24,10 @@ The application is made out of 6 microservices:
 ## How to Run
 
 1. Clone the repository locally
-2. Run `docker-compose up` from the root directory and wait until all the containers are running.
-3. Import the Postman Collection and Environment found under `/postman`.
-4. Issue any request that shows in the collection, you can:
+2. Run `docker network create infrastructure`
+3. Run `docker-compose up` from the root directory and wait until all the containers are running.
+4. Import the Postman Collection and Environment found under `/postman`.
+5. Issue any request that shows in the collection, you can:
    - Sanity check microservices
    - Get current state of smart device microservices
    - Manually send signals to smart device microservices
