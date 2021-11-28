@@ -33,7 +33,7 @@ export class FetcherController {
   }
 
   // Fetch weather data every hour
-  @Cron('* 0 * * * *')
+  @Cron('* 0 * * * * ')
   public async routineFetchWeather() {
     const signal = await this.fetcherService.hourlySignalRoutine();
 

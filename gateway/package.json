@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
-    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node -r dotenv/config dist/main.js dotenv_config_path=../.env.dev\"",
-    "start:prod": "tsc-watch -p tsconfig.build.json --onSuccess \"node -r dotenv/config dist/main.js dotenv_config_path=./.env.prod\"",
+    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node -r dotenv/config dist/gateway/src/main.js dotenv_config_path=../.env.dev\"",
+    "start:prod": "tsc-watch -p tsconfig.build.json --onSuccess \"node -r dotenv/config dist/gateway/src/main.js dotenv_config_path=./.env.prod\"",
     "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "test": "jest --config ./test/jest-e2e.json --detectOpenHandles"
   },
@@ -32,7 +32,7 @@
     "mongoose": "5.10.0",
     "jest": "26.4.0",
     "supertest": "4.0.2",
-    "ts-jest": "26.2.0",
+  "ts-jest": "26.2.0",
     "ts-node": "9.0.0",
     "tsc-watch": "4.2.9",
     "tsconfig-paths": "3.9.0",

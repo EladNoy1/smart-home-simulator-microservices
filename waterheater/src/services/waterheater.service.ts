@@ -29,16 +29,16 @@ export class WaterHeaterService implements SmartDeviceService {
 
     if (signal === DeviceSignal.COLD && isHomeSoon) {
       this.isOn = true; // Heat water
-      console.log(
-        `${signal} signal received, starting to heat water for ${this.heatingDurationInMinutes} minutes`,
-      );
 
+      outputMessage = `${signal} signal received, starting to heat water for ${this.heatingDurationInMinutes} minutes`,
+      console.log(outputMessage);
+      
       setTimeout(() => {
         this.isOn = false;
         console.log('Finished heating water');
       }, this.heatingDurationInMinutes * 60 * 1000);
     } else {
-      outputMessage = `Water Heater state is unchanged`;
+      outputMessage = `Signal other than 'cold' was received or family is not home soon, Water Heater state is unchanged`;
     }
 
     console.log(outputMessage);

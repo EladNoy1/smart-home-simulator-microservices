@@ -17,7 +17,7 @@ export class LightSwitchController implements SmartDeviceController {
 
   @MessagePattern('sanity')
   public sanityCheck(payload) {
-    return 'Light switches service is live v4';
+    return 'Light switches service is live';
   }
 
   @EventPattern('signal_devices')
