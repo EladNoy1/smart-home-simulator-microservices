@@ -1,0 +1,92 @@
+version: "3"
+services:
+  lightswitch:
+    build:
+      context: ./
+      dockerfile: ./lightswitch/Dockerfile
+    restart: always
+    hostname: lightswitch
+    env_file:
+      - .env.prod
+    ports:
+      - "3001:3001"
+    networks:
+      - backend
+      - frontend
+
+  waterheater:
+    build:
+      context: ./
+      dockerfile: ./waterheater/Dockerfile
+    restart: always
+    hostname: waterheater
+    env_file:
+      - .env.prod
+    ports:
+      - "3002:3002"
+    networks:
+      - backend
+      - frontend
+
+  airconditioner:
+    build:
+      context: ./
+      dockerfile: ./airconditioner/Dockerfile
+    restart: always
+    hostname: airconditioner
+    env_file:
+      - .env.prod
+    ports:
+      - "3003:3003"
+    networks:
+      - backend
+      - frontend
+
+  gateway:
+    build:
+      context: ./
+      dockerfile: ./gateway/Dockerfile
+    restart: always
+    hostname: gateway
+    env_file:
+      - .env.prod
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+      - frontend
+
+  fetcher:
+    build:
+      context: ./
+      dockerfile: ./fetcher/Dockerfile
+    restart: always
+    hostname: fetcher
+    env_file:
+      - .env.prod
+    ports:
+      - "3004:3004"
+    networks:
+      - backend
+      - frontend
+
+  publisher:
+    build:
+      context: ./
+      dockerfile: ./publisher/Dockerfile
+    restart: always
+    hostname: publisher
+    env_file:
+      - .env.prod
+    ports:
+      - "3005:3005"
+    networks:
+      - backend
+      - frontend
+
+networks:
+  backend:
+    driver: bridge
+  frontend:
+    external:
+      name: infrastructure

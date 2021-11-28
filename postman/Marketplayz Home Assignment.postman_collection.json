@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "362296b0-f72a-4c55-b2b4-da11e6e67889",
+		"name": "Marketplayz Home Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gateway Sanity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/sanity",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"sanity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LightSwitch sanity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/gateway/sanity/lightswitch",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"sanity",
+						"lightswitch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WaterHeater sanity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/gateway/sanity/waterheater",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"sanity",
+						"waterheater"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AirConditioner sanity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/gateway/sanity/airconditioner",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"sanity",
+						"airconditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Manual Weather Fetch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/gateway/fetch_weather_data",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"fetch_weather_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Manual Test Lightswitch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"signal\": \"hot\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/test/lightswitch",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"test",
+						"lightswitch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Manual Test Water Heater",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"signal\": \"cold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/test/waterheater",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"test",
+						"waterheater"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Manual Test Air Conditioner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"signal\": \"cold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/test/airconditioner",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"test",
+						"airconditioner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get LightSwitch state",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/state/lightswitch",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"state",
+						"lightswitch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get WaterHeater state",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/state/waterheater",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"state",
+						"waterheater"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get AirConditioner state",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/gateway/state/airconditioner",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"gateway",
+						"state",
+						"airconditioner"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

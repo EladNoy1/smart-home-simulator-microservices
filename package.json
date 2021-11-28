@@ -1,0 +1,16 @@
+{
+  "name": "smart-home-simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo me",
+    "lint": "npm --prefix task run lint && npm --prefix user run lint && npm --prefix token run lint && npm --prefix gateway run lint && npm --prefix mailer run lint && npm --prefix permission run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "author": "Elad Noy",
+  "license": "ISC"
+}
